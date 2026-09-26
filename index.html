@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SparkSubs — Abbonamenti Premium a Prezzi Spark</title>
+<meta name="description" content="Abbonamenti Spotify Premium e molto altro, attivazione rapida, prezzi trasparenti." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link" aria-label="SparkSubs Home">
+        <svg class="logo-svg" viewBox="0 0 560 160" width="270" height="77">
+          <defs>
+            <!-- Metallo Oro -->
+            <linearGradient id="goldMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF3B0" />
+              <stop offset="30%" stop-color="#FFD700" />
+              <stop offset="65%" stop-color="#D9A400" />
+              <stop offset="100%" stop-color="#8A6A06" />
+            </linearGradient>
+            <!-- Metallo Viola -->
+            <linearGradient id="purpleMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E3B8FF" />
+              <stop offset="30%" stop-color="#A63BFF" />
+              <stop offset="65%" stop-color="#6D1FBF" />
+              <stop offset="100%" stop-color="#33104F" />
+            </linearGradient>
+            <linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFEFA0" />
+              <stop offset="45%" stop-color="#FFD700" />
+              <stop offset="100%" stop-color="#B8860B" />
+            </linearGradient>
+            <linearGradient id="purpleText" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#D9A6FF" />
+              <stop offset="45%" stop-color="#9B30FF" />
+              <stop offset="100%" stop-color="#4B1680" />
+            </linearGradient>
+            <!-- Bagliori: sfumatura radiale che si spegne prima del bordo, niente tagli netti -->
+            <radialGradient id="glowGoldGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FFD700" stop-opacity="0.65" />
+              <stop offset="55%" stop-color="#FFD700" stop-opacity="0.22" />
+              <stop offset="100%" stop-color="#FFD700" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="glowPurpleGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#9B30FF" stop-opacity="0.65" />
+              <stop offset="55%" stop-color="#9B30FF" stop-opacity="0.22" />
+              <stop offset="100%" stop-color="#9B30FF" stop-opacity="0" />
+            </radialGradient>
+            <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" />
+            </filter>
+            <filter id="boltShadow" x="-40%" y="-40%" width="180%" height="180%">
+              <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.45" />
+            </filter>
+            <!-- Sagoma unica del fulmine, riusata per la copia oro e quella viola -->
+            <path id="boltShape" d="M 74,4 L 22,60 L 50,60 L 6,116 L 90,52 L 58,52 Z" />
+          </defs>
+
+          <!-- Doppio fulmine "S" oro + viola, ben distanziati -->
+          <g id="logo-icon" transform="translate(6, 14)">
+            <!-- Bagliori pulsanti alternati, contenuti con margine per non toccare i bordi -->
+            <ellipse id="glow-gold" cx="55" cy="66" rx="58" ry="66" fill="url(#glowGoldGrad)" filter="url(#softBlur)" />
+            <ellipse id="glow-purple" cx="55" cy="66" rx="58" ry="66" fill="url(#glowPurpleGrad)" filter="url(#softBlur)" />
+
+            <!-- Fulmine viola: dietro, spostato a destra per staccarsi dall'oro -->
+            <use id="bolt-purple" href="#boltShape" xlink:href="#boltShape" transform="translate(18,2)" fill="url(#purpleMetal)" />
+            <!-- Fulmine oro: davanti, in posizione base -->
+            <use id="bolt-gold" href="#boltShape" xlink:href="#boltShape" transform="translate(0,0)" fill="url(#goldMetal)" filter="url(#boltShadow)" />
+          </g>
+
+          <g transform="translate(128, 64)">
+            <text x="0" y="0" font-family="'Arial Black', Impact, system-ui, sans-serif" font-weight="900" font-size="52" fill="url(#goldText)" letter-spacing="0">SPARK</text>
+            <text x="0" y="45" font-family="'Arial Black', Impact, system-ui, sans-serif" font-weight="900" font-size="52" fill="url(#purpleText)" letter-spacing="4">SUBS</text>
+          </g>
+        </svg>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#come-funziona">Come funziona</a>
+        <a href="#piani">Piani</a>
+        <a href="#altri">Altri servizi</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#piani" class="btn btn-primary btn-small">Attiva ora</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-inner">
+      <span class="badge">🎧 Spotify Premium & altro</span>
+      <h1>Musica senza limiti, <span class="text-gradient">al prezzo giusto.</span></h1>
+      <p class="hero-sub">
+        Attiva il tuo abbonamento Spotify Premium in pochi minuti, senza pubblicità, senza pensieri.
+        Pagamenti sicuri, rinnovo trasparente, supporto reale.
+      </p>
+      <div class="hero-cta">
+        <a href="#piani" class="btn btn-primary">Scopri i piani Spotify</a>
+        <a href="#altri" class="btn btn-ghost">Vedi altri abbonamenti</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><strong>100%</strong><span>Account funzionante o rimborso</span></div>
+        <div class="stat"><strong>&lt; 24h</strong><span>Tempo di attivazione</span></div>
+        <div class="stat"><strong>+5</strong><span>Servizi disponibili</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COME FUNZIONA ===== -->
+  <section id="come-funziona" class="section">
+    <div class="container">
+      <h2 class="section-title">Come funziona</h2>
+      <p class="section-sub">Tre passaggi, zero complicazioni.</p>
+
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Scegli il piano</h3>
+          <p>Seleziona il piano Spotify Premium più adatto a te: annuale disponibile ora, trimestrale in arrivo a breve.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Effettua il pagamento</h3>
+          <p>Paga in modo sicuro tramite i metodi disponibili. Ricevi conferma immediata dell'ordine.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Ricevi l'attivazione</h3>
+          <p>Ti invio le istruzioni o l'invito diretto: il tuo account sarà Premium in pochissimo tempo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PIANI SPOTIFY ===== -->
+  <section id="piani" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Piani Spotify Premium</h2>
+      <p class="section-sub">Scegli l'abbonamento più adatto a te.</p>
+
+      <div class="pricing-grid pricing-grid-2">
+        <div class="price-card featured">
+          <span class="ribbon">Più conveniente</span>
+          <h3>Piano Annuale</h3>
+          <div class="price">€25</div>
+          <ul>
+            <li>Musica senza pubblicità</li>
+            <li>Ascolto offline</li>
+            <li>Qualità audio alta</li>
+            <li>Miglior rapporto qualità/prezzo</li>
+          </ul>
+          <a href="#contatti" class="btn btn-primary btn-block">Scegli piano</a>
+        </div>
+
+        <div class="price-card price-card-soon">
+          <span class="ribbon ribbon-soon">In arrivo</span>
+          <h3>Piano Trimestrale</h3>
+          <div class="price">—</div>
+          <ul>
+            <li>Musica senza pubblicità</li>
+            <li>Ascolto offline</li>
+            <li>Qualità audio alta</li>
+          </ul>
+          <a href="#" class="btn btn-ghost btn-block btn-disabled" aria-disabled="true">Prossimamente</a>
+        </div>
+      </div>
+      <p class="disclaimer">* Prezzo annuale indicativo per il mockup, da confermare prima della pubblicazione.</p>
+    </div>
+  </section>
+
+  <!-- ===== ALTRI ABBONAMENTI ===== -->
+  <section id="altri" class="section">
+    <div class="container">
+      <h2 class="section-title">Non solo Spotify</h2>
+      <p class="section-sub">Sono disponibile anche per altri abbonamenti su richiesta.</p>
+
+      <div class="other-grid">
+        <div class="other-card"><span class="other-emoji">🎬</span><h4>Netflix</h4><p>Su richiesta</p></div>
+        <div class="other-card"><span class="other-emoji">📺</span><h4>Disney+</h4><p>Su richiesta</p></div>
+        <div class="other-card"><span class="other-emoji">🟢</span><h4>YouTube Premium</h4><p>Su richiesta</p></div>
+        <div class="other-card"><span class="other-emoji">🎮</span><h4>Xbox Game Pass</h4><p>Su richiesta</p></div>
+        <div class="other-card other-card-more">
+          <span class="other-emoji">✨</span>
+          <h4>Altro?</h4>
+          <p>Scrivimi, valutiamo insieme</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Domande frequenti</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>È sicuro? Rischio il ban dell'account?</summary>
+          <p>Le attivazioni seguono le modalità più sicure disponibili. In caso di problemi, offro assistenza e sostituzione.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quanto tempo serve per l'attivazione?</summary>
+          <p>Generalmente entro 24 ore dal pagamento confermato, spesso anche prima.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Posso richiedere un abbonamento diverso da Spotify?</summary>
+          <p>Certo, contattami e valutiamo disponibilità e prezzo per il servizio che ti interessa.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINALE ===== -->
+  <section class="cta-final" id="contatti">
+    <div class="container cta-final-inner">
+      <h2>Pronto ad accendere la tua musica?</h2>
+      <p>Contattami per attivare il tuo Spotify Premium oggi stesso.</p>
+      <a href="https://wa.me/393665936420?text=Ciao%2C%20sono%20interessato%20al%20servizio%20di%20abbonamento%20Spotify%21" target="_blank" rel="noopener" class="btn btn-primary">Contattami ora</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 SparkSubs — Tutti i diritti riservati</span>
+      <span class="footer-note">Servizio indipendente, non affiliato a Spotify AB.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
