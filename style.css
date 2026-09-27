@@ -14,7 +14,11 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+  overscroll-behavior-y: none;
+}
 
 body {
   margin: 0;
@@ -22,6 +26,7 @@ body {
   color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
+  overscroll-behavior-y: none;
 }
 
 .container {
@@ -220,6 +225,20 @@ a { color: inherit; text-decoration: none; }
 }
 .step-card h3 { margin: 0 0 10px; font-size: 19px; }
 .step-card p { margin: 0; color: var(--text-dim); font-size: 14.5px; }
+
+.steps-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, rgba(255, 215, 0, .08), rgba(155, 48, 255, .08));
+  border: 1px solid var(--card-border);
+}
+.steps-note-icon { font-size: 26px; flex-shrink: 0; }
+.steps-note p { margin: 0; color: var(--text-dim); font-size: 14.5px; }
+.steps-note strong { color: var(--gold); }
 
 /* Pricing */
 .pricing-grid {
